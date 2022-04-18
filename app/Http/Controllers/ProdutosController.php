@@ -12,16 +12,19 @@ class ProdutosController extends Controller
     }
 
     function novo(Request $req){
+
         $nome = $req->input('nome');
         $categoria = $req->input('categoria');
         $NCM = $req->input('NCM');
         $valor = $req->input('valor');
+        $id_fornecedor = $req->input('id_fornecedor');
 
         $produto = new Produto();
         $produto->nome = $nome;
         $produto->categoria = $categoria;
         $produto->NCM = $NCM;
         $produto->valor = $valor;
+        $produto->id_fornecedor = $id_fornecedor;
 
         $produto->save();
 

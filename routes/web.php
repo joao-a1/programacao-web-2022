@@ -60,3 +60,6 @@ Route::get('/fornecedores/alterar/{id}', [FornecedoresController::class, 'altera
 Route::post('/fornecedores/alterar', [FornecedoresController::class, 'salvar'])->name('fornecedores_salvar');
 
 Route::get('/fornecedores/excluir/{id}', [FornecedoresController::class, 'excluir'])->name('fornecedores_excluir');
+
+// Fornecedores_Produtos
+Route::get('produtos/fornecedores/listar', [FornecedoresController::class, 'relacionamento'])->name('produtos_fornecedores_listar');

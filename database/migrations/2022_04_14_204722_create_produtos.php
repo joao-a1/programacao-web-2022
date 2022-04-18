@@ -19,6 +19,9 @@ return new class extends Migration
             $table->string('categoria', 100);
             $table->string('NCM', 20);
             $table->double('valor', 20, 2);
+            $table->unsignedBigInteger('id_fornecedor')->nullable();
+
+            $table->foreign('id_fornecedor')->references('id')->on('fornecedores');
             $table->timestamps();
         });
     }

@@ -10,6 +10,7 @@
             <th>Categoria</th>
             <th>NCM</th>
             <th>Valor</th>
+            <th>Fornecedor</th>
             <th>Operações</th>
         </tr>
     </thead>
@@ -21,6 +22,7 @@
         <td>{{ $p->categoria }}</td>
         <td>{{ $p->NCM }}</td>
         <td>{{ $p->valor }}.00</td>
+        <td>{{ $p->id_fornecedor }}</td>
         <td>
             <a href="{{ route('produtos_alterar', ['id' => $p->id]) }}" class="btn btn-warning">Alterar</a>
             <a href="{{ route('produtos_excluir', ['id' => $p->id]) }}" onclick="excluir({{ $p->id }})" class="btn btn-danger">Excluir</a>

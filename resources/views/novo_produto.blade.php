@@ -29,6 +29,19 @@ Produto-Novo
                             <input id="valor" type="text" class="form-control" onchange="validar();" name="valor">
                         </div>
                         <div class="input-group mb-3">
+                            <label class="input-group-text">Fornecedor</label>
+                            <select id="id_fornecedor" class="form-select" onchange="validar();" name="id_fornecedor">
+                                <option value="">Selecione...</option>
+                                
+                                <option value="1">Fornecedor 1</option>
+                                <option value="2">Fornecedor 2</option>
+                                <option value="3">Fornecedor 3</option>
+                                <option value="4">Fornecedor 4</option>
+                                <option value="5">Fornecedor 5</option>
+                                
+                            </select>
+                        </div>
+                        <div class="input-group mb-3">
                             <input id="salvar" type="submit" class="btn btn-success" value="salvar" disabled>
                         </div>
                     </div>

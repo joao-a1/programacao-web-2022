@@ -21,7 +21,7 @@
         <td>{{ $p->nome }}</td>
         <td>{{ $p->categoria }}</td>
         <td>{{ $p->NCM }}</td>
-        <td>{{ $p->valor }}.00</td>
+        <td>{{ $p->valor }}</td>
         <td>{{ $p->id_fornecedor }}</td>
         <td>
             <a href="{{ route('produtos_alterar', ['id' => $p->id]) }}" class="btn btn-warning">Alterar</a>

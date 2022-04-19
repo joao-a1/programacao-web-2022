@@ -30,11 +30,11 @@ Produto-Novo
                         </div>
                         <div class="input-group mb-3">
                             <label class="input-group-text">Fornecedor</label>
-                            <select id="id_fornecedor" class="form-select" onchange="validar();" name="id_fornecedor">
+                            <select id="id_fornecedor" class="form-select" name="id_fornecedor">
                                 <option value="">Selecione...</option>
                                 
-                                @foreach($f as $fornecedor)
-                                <option value="{{ $fornecedor->id }}">{{ $fornecedor->nome }}</option>
+                                @foreach($fornecedor as $f)
+                                <option value="{{ $f->id }}">{{ $f->nome }}</option>
                                 @endforeach
                                 
                             </select>

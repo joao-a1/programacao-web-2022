@@ -32,11 +32,9 @@
     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
     </tbody>
 </table>
-<div class="container">
+<div class="container fluid">
     <div>
         <a href="<?php echo e(route('fornecedores_novo')); ?>"><button class="btn btn-primary">Voltar</button> </a>
-    </div>
-    <div>
         <a href="<?php echo e(route('produtos_fornecedores_listar')); ?>"><button class="btn btn-primary">Produtos - Fornecedor</button> </a>
     </div>
 </div>

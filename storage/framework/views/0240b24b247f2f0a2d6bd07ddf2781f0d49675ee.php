@@ -21,7 +21,7 @@
         <td><?php echo e($p->nome); ?></td>
         <td><?php echo e($p->categoria); ?></td>
         <td><?php echo e($p->NCM); ?></td>
-        <td><?php echo e($p->valor); ?>.00</td>
+        <td><?php echo e($p->valor); ?></td>
         <td><?php echo e($p->id_fornecedor); ?></td>
         <td>
             <a href="<?php echo e(route('produtos_alterar', ['id' => $p->id])); ?>" class="btn btn-warning">Alterar</a>

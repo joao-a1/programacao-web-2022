@@ -18,7 +18,7 @@
         <td><?php echo e($c->id); ?></td>
         <td><?php echo e($c->nome); ?></td>
         <td><?php echo e($c->telefone); ?></td>
-        <td><?php echo e($c->renda); ?>.00</td>
+        <td><?php echo e($c->renda); ?></td>
         <td>
             <a href="<?php echo e(route('clientes_alterar', ['id' => $c->id])); ?>" class="btn btn-warning">Alterar</a>
             <a href="<?php echo e(route('clientes_excluir', ['id' => $c->id])); ?>" onclick="excluir(<?php echo e($c->id); ?>)" class="btn btn-danger">Excluir</a>

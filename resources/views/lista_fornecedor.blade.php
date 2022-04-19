@@ -35,8 +35,6 @@
 <div class="container">
     <div>
         <a href="{{ route('fornecedores_novo')}}"><button class="btn btn-primary">Voltar</button> </a>
-    </div>
-    <div>
         <a href="{{ route('produtos_fornecedores_listar')}}"><button class="btn btn-primary">Produtos - Fornecedor</button> </a>
     </div>
 </div>

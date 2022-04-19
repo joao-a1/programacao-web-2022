@@ -1,7 +1,6 @@
 @extends('template')
 
 @section('conteudo')
-@foreach($fornecedor as $f)
 <table class="table">
     <thead>
         <tr>
@@ -10,11 +9,16 @@
         </tr>
     </thead>
     <tbody>
+    @foreach($fornecedor as $f)
         <tr>
-            <td>{{ $f->nome }}</td>
-            <td>{{ $f->produtos }}</td>
+                <td>{{ $f->nome }}</td>
+                <td>
+            @foreach($f->produtos as $p)
+                {{ $p->nome }} <br>
+            @endforeach
+            </td>
         </tr>
+    @endforeach
     </tbody>
 </table>
-@endforeach
 @endsection

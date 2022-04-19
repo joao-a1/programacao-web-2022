@@ -4,11 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Produto;
+use App\Models\Fornecedor;
 
 class ProdutosController extends Controller
 {
     function cadastro_novo(){
-        return view('novo_produto');
+        $f = Fornecedor::all();
+
+        return view('novo_produto', ['f' => $f]);
     }
 
     function novo(Request $req){

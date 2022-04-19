@@ -33,11 +33,9 @@ Produto-Novo
                             <select id="id_fornecedor" class="form-select" onchange="validar();" name="id_fornecedor">
                                 <option value="">Selecione...</option>
                                 
-                                <option value="1">Fornecedor 1</option>
-                                <option value="2">Fornecedor 2</option>
-                                <option value="3">Fornecedor 3</option>
-                                <option value="4">Fornecedor 4</option>
-                                <option value="5">Fornecedor 5</option>
+                                @foreach($f as $fornecedor)
+                                <option value="{{ $fornecedor->id }}">{{ $fornecedor->nome }}</option>
+                                @endforeach
                                 
                             </select>
                         </div>

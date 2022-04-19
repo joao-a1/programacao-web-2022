@@ -9,9 +9,9 @@ use App\Models\Fornecedor;
 class ProdutosController extends Controller
 {
     function cadastro_novo(){
-        $f = Fornecedor::all();
+        $fornecedor = Fornecedor::all();
 
-        return view('novo_produto', ['f' => $f]);
+        return view('novo_produto', ['fornecedor' => $fornecedor]);
     }
 
     function novo(Request $req){
@@ -42,8 +42,9 @@ class ProdutosController extends Controller
 
     function alterar($id){
         $produto = Produto::findOrFail($id);
+        $fornecedor = Fornecedor::all();
 
-        return view('altera_produto', ['produto' => $produto]);
+        return view('altera_produto', ['produto' => $produto], ['fornecedor' => $fornecedor]);
     }
 
     function salvar(Request $req){

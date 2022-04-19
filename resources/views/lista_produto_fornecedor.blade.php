@@ -21,4 +21,6 @@
     @endforeach
     </tbody>
 </table>
+<a href="{{ route('fornecedores_listar')}}"><button class="btn btn-primary">Voltar</button> </a>
+
 @endsection

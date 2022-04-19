@@ -30,14 +30,12 @@ Produto-Novo
                         </div>
                         <div class="input-group mb-3">
                             <label class="input-group-text">Fornecedor</label>
-                            <select id="id_fornecedor" class="form-select" onchange="validar();" name="id_fornecedor">
+                            <select id="id_fornecedor" class="form-select" name="id_fornecedor">
                                 <option value="">Selecione...</option>
                                 
-                                <option value="1">Fornecedor 1</option>
-                                <option value="2">Fornecedor 2</option>
-                                <option value="3">Fornecedor 3</option>
-                                <option value="4">Fornecedor 4</option>
-                                <option value="5">Fornecedor 5</option>
+                                <?php $__currentLoopData = $fornecedor; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $f): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                <option value="<?php echo e($f->id); ?>"><?php echo e($f->nome); ?></option>
+                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                 
                             </select>
                         </div>

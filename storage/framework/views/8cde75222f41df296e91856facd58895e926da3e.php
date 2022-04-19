@@ -31,6 +31,17 @@ Alterar produto - #<?php echo e($produto->id); ?>
                             <input id="valor" type="text" class="form-control" onchange="validar();" name="valor" value="<?php echo e($produto->valor); ?>">
                         </div>
                         <div class="input-group mb-3">
+                            <label class="input-group-text">Fornecedor</label>
+                            <select id="id_fornecedor" class="form-select" onchange="validar();" name="id_fornecedor">
+                                <option value="">Selecione...</option>
+                                
+                                <?php $__currentLoopData = $fornecedor; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $f): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                <option value="<?php echo e($f->id); ?>"><?php echo e($f->nome); ?></option>
+                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                
+                            </select>
+                        </div>
+                        <div class="input-group mb-3">
                             <input id="salvar" type="submit" class="btn btn-success" value="salvar" disabled>
                         </div>
                     </div>

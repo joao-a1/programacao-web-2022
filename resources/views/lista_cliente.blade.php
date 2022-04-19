@@ -18,7 +18,7 @@
         <td>{{ $c->id }}</td>
         <td>{{ $c->nome }}</td>
         <td>{{ $c->telefone }}</td>
-        <td>{{ $c->renda }}.00</td>
+        <td>{{ $c->renda }}</td>
         <td>
             <a href="{{ route('clientes_alterar', ['id' => $c->id]) }}" class="btn btn-warning">Alterar</a>
             <a href="{{ route('clientes_excluir', ['id' => $c->id]) }}" onclick="excluir({{ $c->id }})" class="btn btn-danger">Excluir</a>
